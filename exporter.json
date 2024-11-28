@@ -1,0 +1,18 @@
+{
+    "id": "supernovaio.exporter-test",
+    "name": "Test Exporter",
+    "description": "Exporter for testing purposes",
+    "author": "Brady Ryun",
+    "organization": "Supernova.io",
+    "homepage": "https://supernova.io",
+    "version": "0.1.0",
+    "usesBrands": true,
+    "usesThemes": true,
+    "executable": "/dist/build.js",
+    "engine": "latest",
+    "tags": [
+        "CSS",
+        "Tokens",
+        "Test"
+    ]
+}
