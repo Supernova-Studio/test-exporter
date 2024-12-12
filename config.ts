@@ -5,34 +5,44 @@ import { TokenType } from "@supernovaio/sdk-exporters"
  * Main configuration of the exporter - type interface. Default values for it can be set through `config.json` and users can override the behavior when creating the pipelines.
  */
 export type ExporterConfiguration = {
-  /** When enabled, a disclaimer showing the fact that the file was generated automatically and should not be changed manually will appear in all style styles */
-  showGeneratedFileDisclaimer: boolean
-  /** When enabled, a disclaimer showing the fact that the file was generated automatically and should not be changed manually will appear in all style styles */
+  /** Boolean option */
+  boolean1: boolean
+  /** This should display only when boolean1 is true */
   disclaimer: string
-  /** When enabled, file with all css style files imported will be generated */
-  generateIndexFile: boolean
-  /** When enabled, empty style files will be generated. Otherwise empty are omitted */
-  generateEmptyFiles: boolean
-  /** When enabled, token description will be shown as code comments for every exported token */
-  showDescriptions: boolean
-  /** When enabled, values will use references to other tokens where applicable */
-  useReferences: boolean
-  /** Style of exported token names */
-  tokenNameStyle: StringCase
-  /** Format of the exported colors */
-  colorFormat: ColorFormat
-  /** Max number of decimals in colors */
-  colorPrecision: number
-  /** Number of spaces used to indent every css variables */
-  indent: number
-  /** When set, will prefix each token of a specific type with provided identifier. Put empty string if not necessary */
-  tokenPrefixes: Record<TokenType, string>
+  /** This boolean show false as default */
+  anotherBoolean: boolean
+  /** Some description for boolean 2 */
+  boolean2: boolean
+  /** Some description for boolean 2 */
+  noCategoryBoolean: boolean
+  /** This option uses options array that was later replaced by an object */
+  deprecatedEnumOption: StringCase
+  /** This option uses options array that was later replaced by an object */
+  enumOption: StringCase
+  /** An enum without a category */
+  uncategorizedEnum: "option1" | "option2"
+  /** An enum without any options */
+  emptyEnum: string
+  /** This enum is only shown when boolean1 is true */
+  enumDependingOnBoolean1: "option1" | "option2"
+  /** A number */
+  number1: number
+  /** A number */
+  number2: number
+  /** A number with decimals */
+  number3: number
+  /** This number is invalid and should be skipped */
+  invalidNumber: number
+  /** A basic text string without any special characters */
+  simpleString: string
+  /** A text string that contains multiple lines */
+  multilineString: string
+  /** A text string containing special characters */
+  specialCharString: string
+  /** A string containing a URL with parameters */
+  urlString: string
+  /** This string is invalid because it contains a number instead of text */
+  invalidString: string
   /** Name of each file that will be generated. Tokens are grouped by the type and will land in each of those files */
   styleFileNames: Record<TokenType, string>
-  /** Name of the index file that will be generated */
-  indexFileName: string
-  /** All files will be written to this directory (relative to export root set by the exporter / pipeline configuration / VSCode extension) */
-  baseStyleFilePath: string
-  /** Index file will be written to this directory (relative to export root set by the exporter / pipeline configuration / VSCode extension) */
-  baseIndexFilePath: string
 }
