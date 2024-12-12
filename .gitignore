@@ -25,8 +25,6 @@ src/compiler/diagnosticMessages.generated.json
 src/parser/diagnosticInformationMap.generated.ts
 src/parser/diagnosticMessages.generated.json
 rwc-report.html
-dist/
-./dist/*
 *.swp
 build.json
 *.actual
