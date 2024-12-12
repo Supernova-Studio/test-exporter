@@ -6,6 +6,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "strictNullChecks": true,
+    "typeRoots": [
+      "src/*",
+      "types/*"
+    ],
     "lib": ["ES2021", "dom"],
   }
 }
