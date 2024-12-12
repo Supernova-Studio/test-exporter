@@ -2,10 +2,10 @@ import { FileHelper } from "@supernovaio/export-helpers"
 
 
 export function createWrongFileTypes() {
-    const data = Buffer.from("wrong-file-types");
+    const buffer = new ArrayBuffer(8);
     return FileHelper.createBinaryFile({
         relativePath: ".",
-        data,
+        data: buffer,
         fileName: "binary.txt"
     });
 }
