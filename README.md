@@ -64,8 +64,6 @@ Here is a list of all the configuration options this exporter provides:
 
 - **number3:** Numeric value with decimals. Default: `3.14`.
 
-- **invalidNumber:** Invalid number (default value is a string). This option will not be shown in the UI.
-
 - **simpleString:** A simple text string. Default: `"Hello world"`.
 
 - **multilineString:** A text string with multiple lines. Default:
@@ -73,8 +71,6 @@ Here is a list of all the configuration options this exporter provides:
 - **specialCharString:** A text string containing special characters. Default: `"Hello @ world! #$%"`.
 
 - **urlString:** A text string containing a URL with parameters. Default: `"https://example.com/path?param=value"`.
-
-- **invalidString:** Invalid string (default value is a number). This option will not be shown in the UI.
 
 - **styleFileNames:** Object defining the names of style files to be generated. Default:
   - `Color`: `colors.css`
