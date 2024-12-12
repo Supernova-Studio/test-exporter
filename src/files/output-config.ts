@@ -5,7 +5,7 @@ export function createExporterConfigurationFile(
   data: ExporterConfiguration,
 ) {
   return FileHelper.createTextFile({
-    relativePath: "out",
+    relativePath: ".",
     content: JSON.stringify(data, null, 2),
     fileName: "exporter-configuration.json",
   });
