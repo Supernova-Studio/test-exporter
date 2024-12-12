@@ -1,6 +1,7 @@
 import { Supernova, PulsarContext, RemoteVersionIdentifier, AnyOutputFile, TokenType, TokenTheme } from "@supernovaio/sdk-exporters"
 import { ExporterConfiguration } from "../config"
 import { createWrongFileTypes } from "./files/wrong-file-types"
+import { createExporterConfigurationFile } from "./files/output-config"
 
 /** Exporter configuration. Adheres to the `ExporterConfiguration` interface and its content comes from the resolved default configuration + user overrides of various configuration keys */
 export const exportConfiguration = Pulsar.exportConfig<ExporterConfiguration>()
@@ -17,10 +18,11 @@ Pulsar.export(async (sdk: Supernova, context: PulsarContext): Promise<Array<AnyO
     versionId: context.versionId,
   }
 
-  createWrongFileTypes();
-
   console.log(exportConfiguration);
 
   // Generate output files
-  return []
+  return [
+    createWrongFileTypes(),
+    createExporterConfigurationFile(exportConfiguration),
+  ]
 })
