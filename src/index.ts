@@ -21,7 +21,7 @@ Pulsar.export(async (sdk: Supernova, context: PulsarContext): Promise<Array<AnyO
   console.log(exportConfiguration);
   // Generate output files
   return [
-    createWrongFileTypes(),
+    // createWrongFileTypes(),
     createExporterConfigurationFile(exportConfiguration),
   ]
 })
