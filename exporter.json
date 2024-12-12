@@ -11,8 +11,6 @@
     "executable": "/dist/build.js",
     "engine": "latest",
     "tags": [
-        "CSS",
-        "Tokens",
         "Test"
     ]
 }

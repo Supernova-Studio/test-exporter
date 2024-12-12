@@ -69,104 +69,6 @@
     "title": "Deprecated enum option",
     "description": "This option uses options array that was later replaced by an object",
     "category": "Enums"
-  },{
-    "key": "enumOption",
-    "type": "enum",
-    "options": {
-      "camelCase": {
-        "label": "Camel case",
-        "description": "Example: myVariableName"
-      },
-      "capitalCase": {
-        "label": "Capital case",
-        "description": "Example: My Variable Name"
-      },
-      "constantCase": {
-        "label": "Constant case",
-        "description": "Example: MY_VARIABLE_NAME"
-      },
-      "dotCase": {
-        "label": "Dot case",
-        "description": "Example: my.variable.name"
-      },
-      "headerCase": {
-        "label": "Header case",
-        "description": "Example: My-Variable-Name"
-      },
-      "noCase": {
-        "label": "No case",
-        "description": "Example: my variable name"
-      },
-      "paramCase": {
-        "label": "Param case",
-        "description": "Example: my-variable-name"
-      },
-      "pascalCase": {
-        "label": "Pascal case",
-        "description": "Example: MyVariableName"
-      },
-      "pathCase": {
-        "label": "Path case",
-        "description": "Example: my/variable/name"
-      },
-      "sentenceCase": {
-        "label": "Sentence case",
-        "description": "Example: My variable name"
-      },
-      "snakeCase": {
-        "label": "Snake case",
-        "description": "Example: my_variable_name"
-      }
-    },
-    "default": "camelCase",
-    "title": "Enum option",
-    "description": "This option uses options array that was later replaced by an object",
-    "category": "Enums"
-  },         
-  {
-    "key": "uncategorizedEnum",
-    "type": "enum",
-    "options": {
-      "option1": {
-        "label": "Option 1",
-        "description": "First uncategorized option"
-      },
-      "option2": {
-        "label": "Option 2", 
-        "description": "Second uncategorized option"
-      }
-    },
-    "default": "option1",
-    "title": "Uncategorized Enum",
-    "description": "An enum without a category"
-  },
-  {
-    "key": "emptyEnum",
-    "type": "enum",
-    "options": {},
-    "default": "",
-    "title": "Empty Enum",
-    "description": "An enum without any options",
-    "category": "Enums"
-  },
-  {
-    "key": "enumDependingOnBoolean1",
-    "type": "enum",
-    "options": {
-      "option1": {
-        "label": "Option 1",
-        "description": "First option"
-      },
-      "option2": {
-        "label": "Option 2",
-        "description": "Second option" 
-      }
-    },
-    "default": "option1",
-    "title": "Enum with boolean1 dependency",
-    "description": "This enum is only shown when boolean1 is true",
-    "category": "Enums",
-    "dependsOn": "boolean1"
   },
   {
     "key": "number1",
@@ -190,14 +92,6 @@
     "default": 3.14,
     "title": "Number 3",
     "description": "A number with decimals",
-    "category": "Numbers"
-  },
-  {
-    "key": "invalidNumber",
-    "type": "number",
-    "default": "3.14",
-    "title": "Invalid number",
-    "description": "This number is invalid and should be skipped",
     "category": "Numbers"
   },
   {
@@ -231,14 +125,6 @@
     "default": "https://example.com/path?param=value",
     "title": "URL string",
     "description": "A string containing a URL with parameters",
-    "category": "Strings"
-  },
-  {
-    "key": "invalidString",
-    "type": "string",
-    "default": 123,
-    "title": "Invalid string",
-    "description": "This string is invalid because it contains a number instead of text",
     "category": "Strings"
   },
   {

@@ -1,101 +1,104 @@
-![CSS Exporter](https://raw.githubusercontent.com/Supernova-Studio/exporters/main/exporters/css/resources/header.png)
+![TEst Exporter](https://raw.githubusercontent.com/Supernova-Studio/exporters/main/exporters/css/resources/header.png)
 
-# CSS Exporter
+# Test Exporter
 
-The CSS Exporter is a powerful package for converting your design system data into production-ready CSS. It facilitates a seamless transition from design to development, ensuring consistency and accuracy throughout the process. The CSS exporter has a variety of configuration options to make sure the CSS always fits your codebase.
-
-## Exporter Features
-
-This exporter package takes your design system tokens and converts them to CSS in various ways. Here are its key features:
-
-- **Support for all Supernova token types:** Generates CSS from all token types, including colors, text styles, shadows, dimensions and more.
-- **Branding support:** Can generate CSS for different brands you've defined in Supernova.
-- **Theming support:** Can generate CSS for different themes you've defined in Supernova.
-- **Customizable output:** Can be configured to generate CSS in variety of ways.
-- **Customizable formatting:** Can be configured to generate each token using various formatting, like hex, rgb, camelCase and so on.
-- **Comment support:** Can include descriptions for each token as code comments, if provided. Can also provide a disclaimer at the top of each file to prevent people from tinkering with the generated code manually.
-- **File organization:** Can generate output in various ways, such as separate files for each token type, or a single file with all tokens.
-
-## Example of Output
-
-Given the following design system token (meta representation for brevity):
-
-```typescript
-const tokens = [{
-    type: "color",
-    name: "red",
-    value: "#ff0000",
-    description: "The reddest of reds"
-}, {
-    type: "color",
-    name: "blue",
-    value: "#0000ff",
-}, {
-    type: "color",
-    name: "primary",
-    value: "{primary}",
-    description: "The main color used throughout the application"
-}];
-```
-
-With configurations:
-
-```json
-{
-    "showGeneratedFileDisclaimer": true,
-    "disclaimer": "This file was automatically generated. Do not modify manually.",
-    "showDescriptions": true,
-    "useReferences": true,
-    "tokenNameStyle": "paramCase",
-    "colorFormat": "hex",
-    "indent": 2
-}
-```
-
-The exporter would produce:
-
-```css
-/* This file was automatically generated. Do not modify manually. */
-
-:root {
-  /* The reddest of reds */
-  --color-red: #ff0000;
-  --color-blue: #0000ff;
-  /* The main color used throughout the application. */
-  --color-primary: var(--color-red);
-}
-```
+The test exporter for Supernova. This allows us to test various configuration inputs to ensure our exporters are working properly.
 
 ## Configuration Options
 
 Here is a list of all the configuration options this exporter provides:
 
-- **showGeneratedFileDisclaimer:** Toggle to show a disclaimer indicating the file is auto-generated.
-  
-- **disclaimer:** Set the text of the aforementioned disclaimer.
-  
-- **generateIndexFile:** Decide whether an aggregate index file should be created.
-  
-- **generateEmptyFiles:** Choose if files with no styles should still be generated.
-  
-- **showDescriptions:** Display descriptions for each token as code comments.
-  
-- **useReferences:** Use references to other tokens instead of direct values where possible.
-  
-- **tokenNameStyle:** Define the naming convention of the exported tokens.
-  
-- **colorFormat:** Set the format in which colors are exported.
-  
-- **colorPrecision:** Determine the number of decimals for exported colors.
-  
-- **indent:** Set the number of spaces for indentation.
-  
-- **tokenPrefixes:** Prefix each token type with a specific identifier.
-  
-- **styleFileNames:** Name the generated style files based on token types.
-  
-- **indexFileName:** Name the generated index file.
-  
-- **baseStyleFilePath:** Define the directory path for style files.
-  
-- **baseIndexFilePath:** Define the directory path for the index file.
+- **boolean1:** Boolean option to toggle Boolean 1. Default: `true`.
+
+- **disclaimer:** Set the text of the disclaimer. Only shown when `boolean1` is `true`. Default: `"Some default text"`.
+
+- **anotherBoolean:** A boolean option with no valid dependency (depends on `xy` which does not exist). This option will not be shown in the UI.
+
+- **boolean2:** Boolean option for Boolean 2. Default: `true`.
+
+- **noCategoryBoolean:** Boolean option with no category. Default: `true`.
+
+- **deprecatedEnumOption:** Select from a deprecated set of cases (uses an array of options). Default: `"camelCase"`. Options:
+
+  - `camelCase`: Example: `myVariableName`
+  - `capitalCase`: Example: `My Variable Name`
+  - `constantCase`: Example: `MY_VARIABLE_NAME`
+  - `dotCase`: Example: `my.variable.name`
+  - `headerCase`: Example: `My-Variable-Name`
+  - `noCase`: Example: `my variable name`
+  - `paramCase`: Example: `my-variable-name`
+  - `pascalCase`: Example: `MyVariableName`
+  - `pathCase`: Example: `my/variable/name`
+  - `sentenceCase`: Example: `My variable name`
+  - `snakeCase`: Example: `my_variable_name`
+
+- **enumOption:** Select from a set of cases. Default: `"camelCase"`. Options:
+
+  - `camelCase`: Example: `myVariableName`
+  - `capitalCase`: Example: `My Variable Name`
+  - `constantCase`: Example: `MY_VARIABLE_NAME`
+  - `dotCase`: Example: `my.variable.name`
+  - `headerCase`: Example: `My-Variable-Name`
+  - `noCase`: Example: `my variable name`
+  - `paramCase`: Example: `my-variable-name`
+  - `pascalCase`: Example: `MyVariableName`
+  - `pathCase`: Example: `my/variable/name`
+  - `sentenceCase`: Example: `My variable name`
+  - `snakeCase`: Example: `my_variable_name`
+
+- **uncategorizedEnum:** An enum option without a category. Default: `"option1"`. Options:
+
+  - `option1`: First uncategorized option
+  - `option2`: Second uncategorized option
+
+- **emptyEnum:** An enum with no available options. This option will not be shown in the UI.
+
+- **enumDependingOnBoolean1:** Enum option dependent on `boolean1`. Only shown when `boolean1` is `true`. Default: `"option1"`. Options:
+
+  - `option1`: First option
+  - `option2`: Second option
+
+- **number1:** Numeric value for Number 1. Default: `3`.
+
+- **number2:** Numeric value for Number 2. Default: `2`.
+
+- **number3:** Numeric value with decimals. Default: `3.14`.
+
+- **invalidNumber:** Invalid number (default value is a string). This option will not be shown in the UI.
+
+- **simpleString:** A simple text string. Default: `"Hello world"`.
+
+- **multilineString:** A text string with multiple lines. Default:
+
+- **specialCharString:** A text string containing special characters. Default: `"Hello @ world! #$%"`.
+
+- **urlString:** A text string containing a URL with parameters. Default: `"https://example.com/path?param=value"`.
+
+- **invalidString:** Invalid string (default value is a number). This option will not be shown in the UI.
+
+- **styleFileNames:** Object defining the names of style files to be generated. Default:
+  - `Color`: `colors.css`
+  - `Typography`: `typography.css`
+  - `Dimension`: `dimensions.css`
+  - `Size`: `sizes.css`
+  - `Space`: `spaces.css`
+  - `Opacity`: `opacities.css`
+  - `FontSize`: `font-sizes.css`
+  - `LineHeight`: `line-heights.css`
+  - `LetterSpacing`: `letter-spacings.css`
+  - `ParagraphSpacing`: `paragraph-spacings.css`
+  - `BorderWidth`: `border-widths.css`
+  - `BorderRadius`: `radii.css`
+  - `Duration`: `durations.css`
+  - `ZIndex`: `z-indices.css`
+  - `Shadow`: `shadows.css`
+  - `Border`: `borders.css`
+  - `Gradient`: `gradients.css`
+  - `String`: `strings.css`
+  - `ProductCopy`: `product-copy.css`
+  - `FontFamily`: `font-families.css`
+  - `FontWeight`: `font-weights.css`
+  - `TextCase`: `text-cases.css`
+  - `TextDecoration`: `text-decorations.css`
+  - `Visibility`: `visibility.css`
+  - `Blur`: `blurs.css`

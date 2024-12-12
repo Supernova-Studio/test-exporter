@@ -1,4 +1,4 @@
-import { StringCase, ColorFormat } from "@supernovaio/export-helpers"
+import { StringCase } from "@supernovaio/export-helpers"
 import { TokenType } from "@supernovaio/sdk-exporters"
 
 /**
@@ -18,21 +18,19 @@ export type ExporterConfiguration = {
   /** This option uses options array that was later replaced by an object */
   deprecatedEnumOption: StringCase
   /** This option uses options array that was later replaced by an object */
-  enumOption: StringCase
+  // enumOption: StringCase
   /** An enum without a category */
-  uncategorizedEnum: "option1" | "option2"
-  /** An enum without any options */
-  emptyEnum: string
+  // uncategorizedEnum: "option1" | "option2"
+  // /** An enum without any options */
+  // emptyEnum: string
   /** This enum is only shown when boolean1 is true */
-  enumDependingOnBoolean1: "option1" | "option2"
+  // enumDependingOnBoolean1: "option1" | "option2"
   /** A number */
   number1: number
   /** A number */
   number2: number
   /** A number with decimals */
   number3: number
-  /** This number is invalid and should be skipped */
-  invalidNumber: number
   /** A basic text string without any special characters */
   simpleString: string
   /** A text string that contains multiple lines */
@@ -41,8 +39,6 @@ export type ExporterConfiguration = {
   specialCharString: string
   /** A string containing a URL with parameters */
   urlString: string
-  /** This string is invalid because it contains a number instead of text */
-  invalidString: string
   /** Name of each file that will be generated. Tokens are grouped by the type and will land in each of those files */
   styleFileNames: Record<TokenType, string>
 }
