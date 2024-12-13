@@ -1,4 +1,4 @@
-import { Supernova, PulsarContext, RemoteVersionIdentifier, AnyOutputFile, TokenType, TokenTheme } from "@supernovaio/sdk-exporters"
+import { Supernova, PulsarContext, RemoteVersionIdentifier, AnyOutputFile } from "@supernovaio/sdk-exporters"
 import { ExporterConfiguration } from "../config"
 import { generateBinaryFileWithTxtExtension } from "./files/wrong-file-types"
 import { createExporterConfigurationFile } from "./files/output-config"
