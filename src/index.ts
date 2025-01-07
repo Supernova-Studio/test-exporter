@@ -22,6 +22,6 @@ Pulsar.export(async (sdk: Supernova, context: PulsarContext): Promise<Array<AnyO
   // Generate output files
   return [
     // generateBinaryFileWithTxtExtension(),
-    createExporterConfigurationFile(exportConfiguration),
+    // createExporterConfigurationFile(exportConfiguration),
   ]
 })
