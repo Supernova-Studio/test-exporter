@@ -8,15 +8,6 @@
     "category": "Booleans"
   },
   {
-    "key": "disclaimer",
-    "type": "string",
-    "default": "Some default text",
-    "title": "Disclaimer",
-    "description": "This should display only when boolean1 is true, category is ignored (category comes from the dependsOn key)",
-    "category": "Booleans",
-    "dependsOn": "boolean1"
-  },
-  {
     "key": "boolean2",
     "type": "boolean",
     "default": true,
