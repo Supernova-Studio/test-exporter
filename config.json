@@ -8,6 +8,17 @@
     "category": "Booleans"
   },
   {
+    "key": "disclaimer",
+    "type": "string",
+    "default": "Some default text",
+    "title": "Disclaimer",
+    "description": "This should display only when boolean1 is true, category is ignored (category comes from the dependsOn key)",
+    "category": "Booleans",
+    "dependsOn": {
+      "boolean1": true
+    }
+  },
+  {
     "key": "boolean2",
     "type": "boolean",
     "default": true,
@@ -110,7 +121,9 @@
     "title": "Enum with boolean1 dependency",
     "description": "This enum is only shown when boolean1 is true",
     "category": "Enums",
-    "dependsOn": "boolean1"
+    "dependsOn": {
+      "boolean1": true
+    }
   },
   {
     "key": "number1",
