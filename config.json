@@ -58,6 +58,7 @@
     "key": "enumOption",
     "type": "enum",
     "title": "V2 Enum Option",
+    "description": "This is a new enum option",
     "options": {
       "camelCase": {
         "label": "Camel case",
