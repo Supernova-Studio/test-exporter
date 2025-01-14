@@ -8,7 +8,7 @@ export type ExporterConfiguration = {
   /** Boolean option */
   boolean1: boolean
   /** This should display only when boolean1 is true */
-  disclaimer: string
+  // disclaimer: string
   /** This boolean show false as default */
   anotherBoolean: boolean
   /** Some description for boolean 2 */
