@@ -71,6 +71,75 @@
     "category": "Enums"
   },
   {
+    "key": "enumOption",
+    "type": "enum",
+    "options": {
+      "camelCase": {
+        "label": "Camel case",
+        "description": "Example: myVariableName"
+      },
+      "capitalCase": {
+        "label": "Capital case",
+        "description": "Example: My Variable Name"
+      },
+      "constantCase": {
+        "label": "Constant case",
+        "description": "Example: MY_VARIABLE_NAME"
+      },
+      "dotCase": {
+        "label": "Dot case",
+        "description": "Example: my.variable.name"
+      },
+      "headerCase": {
+        "label": "Header case",
+        "description": "Example: My-Variable-Name"
+      },
+      "noCase": {
+        "label": "No case",
+        "description": "Example: my variable name"
+      },
+      "paramCase": {
+        "label": "Param case",
+        "description": "Example: my-variable-name"
+      },
+      "pascalCase": {
+        "label": "Pascal case",
+        "description": "Example: MyVariableName"
+      },
+      "pathCase": {
+        "label": "Path case",
+        "description": "Example: my/variable/name"
+      },
+      "sentenceCase": {
+        "label": "Sentence case",
+        "description": "Example: My variable name"
+      },
+      "snakeCase": {
+        "label": "Snake case",
+        "description": "Example: my_variable_name"
+      }
+    }
+  },
+  {
+    "key": "enumDependingOnBoolean1",
+    "type": "enum",
+    "options": {
+      "option1": {
+        "label": "Option 1",
+        "description": "First option"
+      },
+      "option2": {
+        "label": "Option 2",
+        "description": "Second option" 
+      }
+    },
+    "default": "option1",
+    "title": "Enum with boolean1 dependency",
+    "description": "This enum is only shown when boolean1 is true",
+    "category": "Enums",
+    "dependsOn": "boolean1"
+  },
+  {
     "key": "number1",
     "type": "number",
     "default": 3,
