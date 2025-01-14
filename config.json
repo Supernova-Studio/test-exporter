@@ -17,24 +17,6 @@
     "dependsOn": "boolean1"
   },
   {
-    "key": "anotherBoolean",
-    "type": "boolean",
-    "default": false,
-    "title": "False boolean",
-    "description": "This boolean show false as default",
-    "category": "Booleans",
-    "dependsOn": "xy"
-  },
-  {
-    "key": "anotherBoolean",
-    "type": "boolean",
-    "default": false,
-    "title": "Confused boolean",
-    "description": "This boolean is dependent on option that doesn't exist — it should not be shown in the UI",
-    "category": "Booleans",
-    "dependsOn": "xy"
-  },
-  {
     "key": "boolean2",
     "type": "boolean",
     "default": true,
