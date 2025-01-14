@@ -57,6 +57,7 @@
   {
     "key": "enumOption",
     "type": "enum",
+    "title": "V2 Enum Option",
     "options": {
       "camelCase": {
         "label": "Camel case",
