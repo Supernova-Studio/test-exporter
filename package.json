@@ -1,6 +1,6 @@
 {
   "name": "@supernovaio/exporter-test",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Export your design system tokens into CSS variables and definitions using Supernova.io export engine",
   "main": "index.js",
   "scripts": {

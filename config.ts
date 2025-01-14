@@ -18,13 +18,13 @@ export type ExporterConfiguration = {
   /** This option uses options array that was later replaced by an object */
   deprecatedEnumOption: StringCase
   /** This option uses options array that was later replaced by an object */
-  // enumOption: StringCase
+  enumOption: StringCase
   /** An enum without a category */
   // uncategorizedEnum: "option1" | "option2"
   // /** An enum without any options */
   // emptyEnum: string
   /** This enum is only shown when boolean1 is true */
-  // enumDependingOnBoolean1: "option1" | "option2"
+  enumDependingOnBoolean1: "option1" | "option2"
   /** A number */
   number1: number
   /** A number */
