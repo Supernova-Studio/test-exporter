@@ -250,5 +250,14 @@
     "allowedValues": {
       "type": "string"
     }
+  },
+  {
+    "key": "codeblock",
+    "type": "code",
+    "language": "typescript",
+    "default": "console.log('Hello world');",
+    "title": "Code block",
+    "description": "A code block",
+    "category": "Code"
   }
 ]

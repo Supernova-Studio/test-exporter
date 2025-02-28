@@ -37,4 +37,9 @@ export type ExporterConfiguration = {
   urlString: string
   /** Name of each file that will be generated. Tokens are grouped by the type and will land in each of those files */
   styleFileNames: Record<TokenType, string>
+
+  /** A code block */
+  codeblock: string
+
+
 }
