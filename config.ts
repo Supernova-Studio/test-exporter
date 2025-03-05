@@ -41,5 +41,6 @@ export type ExporterConfiguration = {
   /** A code block */
   codeblock: string
 
-
+  /** An object with an empty allowedKeys array */
+  emptyAllowedKeysObject: Record<string, unknown>
 }

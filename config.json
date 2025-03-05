@@ -259,5 +259,13 @@
     "title": "Code block",
     "description": "A code block",
     "category": "Code"
+  },
+  {
+    "key": "emptyAllowedKeysObject",
+    "type": "object",
+    "title": "Empty allowed keys object",
+    "description": "An object with an empty allowedKeys array",
+    "category": "Object",
+    "default": {}
   }
 ]
